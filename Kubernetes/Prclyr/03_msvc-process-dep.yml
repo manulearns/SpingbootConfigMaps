@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: msvc-process
+spec:
+  selector:
+    matchLabels:
+      app: msvc-process
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: msvc-process
+    spec:
+      containers:
+        - name: msvc-process
+          image: docker.io/manuericsson/msvcprc
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 17091
+          env:
+            - name: intlyrurl
+              valueFrom:
+                configMapKeyRef:
+                  name: msvc-process
+                  key: intlyrurl        

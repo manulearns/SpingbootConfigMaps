@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: msvc-int
+spec:
+  selector:
+    app: msvc-int
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 17092
+      nodePort: 30083
+  type: NodePort
