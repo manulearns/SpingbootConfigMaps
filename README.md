@@ -14,4 +14,4 @@ In this repository, we will:
 ## Create Docker images
  
 ## Deploy in Kubernetes using ConfigMaps
- * Look in the Kubernetes folders to see the yml files for creating deployment, service & configmap objects in kubernetes
+ * Look in the Kubernetes folders to see the yml files for creating deployment, service & configmap objects in kubernetes ***Test
